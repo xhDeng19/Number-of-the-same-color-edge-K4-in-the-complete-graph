@@ -12,7 +12,7 @@ $G$ 为 $n$ 个点的完全图，用黑白两种颜色对 $G$ 中的边进行染
 
 概率方法只给出了存在性的证明，我们希望找到确定性的满足条件的染色方法（去随机化）：对 $G$ 中的边随便排个序，假设 $e_1,\cdots,e_{i-1}$ 已染好色， $e_i,\cdots,e_m$ 未染色，现在需要染 $e_i$ 边。对 $G$ 中每一个 $K_4$ 定义这样一个函数 $w(K_4)\in \mathbb R$，若 $K_4$ 的 $6$ 条边都未染色，则 $w(K_4)=2^{-5}$ ；若 $K_4$ 的 $6$ 条边有 $j$ 条边已经染好色，并且它们不同色，则 $w(K_4)=0$；若 $K_4$ 的 $6$ 条边有 $j$ 条边已经染好色，并且它们同色，则 $w(K_4)=2^{-(6-j)}$。
 
-现在只有 $e_1,\cdots,e_{i-1}$ 染好了色，定义 $w_{i-1}=\sum_{K_4}w(K_4)$ 为当前染色方案的“分数”，定义 $w_i(\text{black})$ 为 $e_i$ 染成黑色后染色方案的“分数”，$w_i(\text{white})$ 为 $e_i$ 染成白色后染色方案的“分数”。通过计算有 
+现在只有 $e_1,\cdots,e_{i-1}$ 染好了色，定义 $w_{i-1}=\sum_{K_4}w(K_4)$ 为当前染色方案的“分数”，定义 $w_i(\text{black})$ 为 $e_i$ 染成黑色后染色方案的“分数”， $w_i(\text{white})$ 为 $e_i$ 染成白色后染色方案的“分数”。通过计算有 
 
 $$
 w_{i-1}=\frac{w_i(\text{black})+w_i(\text{white})}{2}
@@ -82,7 +82,7 @@ double total_weight = K * pow(2, -5);
 
 结果分析：
 
-对n较小的完全图，可以列出算法给出的具体染色方案，如下是一个6个点完全图的染色方案，"ALG: Number of the same color k4s: 0"说明这个染色方案有0个同色的$K_4$。
+对n较小的完全图，可以列出算法给出的具体染色方案，如下是一个6个点完全图的染色方案，"ALG: Number of the same color k4s: 0"说明这个染色方案有0个同色的 $K_4$ 。
 
 ![图2](https://github.com/xhDeng19/Number-of-the-same-color-edge-K4-in-the-complete-graph/blob/main/pics/6_vertices_coloring.png?raw=true)
 
