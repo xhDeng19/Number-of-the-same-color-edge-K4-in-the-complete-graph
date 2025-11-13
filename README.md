@@ -78,17 +78,17 @@ double total_weight = K * pow(2, -5);
 
 因此时间复杂度总共为 $O(n^4)$，还算不错。具体测下来，200个点的完全图染完色只需123秒，如下。
 
-![图1]("https://github.com/xhDeng19/Number-of-the-same-color-edge-K4-in-the-complete-graph/blob/main/pics/200_vertices_time.png?raw=true")
+![图1](https://github.com/xhDeng19/Number-of-the-same-color-edge-K4-in-the-complete-graph/blob/main/pics/200_vertices_time.png?raw=true)
 
 结果分析：
 
 对n较小的完全图，可以列出算法给出的具体染色方案，如下是一个6个点完全图的染色方案，"ALG: Number of the same color k4s: 0"说明这个染色方案有0个同色的$K_4$。
 
-![图2]("https://github.com/xhDeng19/Number-of-the-same-color-edge-K4-in-the-complete-graph/blob/main/pics/6_vertices_coloring.png?raw=true")
+![图2](https://github.com/xhDeng19/Number-of-the-same-color-edge-K4-in-the-complete-graph/blob/main/pics/6_vertices_coloring.png?raw=true)
 
 当n逐渐增大时，可以研究算法ALG给出的染色方案的同色 $K_4$ 与期望 $\binom{n}{4}\cdot 2^{-5}$ 之间的关系，可以绘制如下的变化图。由于 $K_4$ 数量大约随 $n^4$ 增大，因此采用log和线性的尺度来呈现下图。
 
-![图3]("https://github.com/xhDeng19/Number-of-the-same-color-edge-K4-in-the-complete-graph/blob/main/pics/number_of_k4s_graph.png?raw=true")
+![图3](https://github.com/xhDeng19/Number-of-the-same-color-edge-K4-in-the-complete-graph/blob/main/pics/number_of_k4s_graph.png?raw=true)
 
 ## 完整代码
 ```
